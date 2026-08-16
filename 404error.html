@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 | NodeCore</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+
+            font-family: Arial, sans-serif;
+
+            background: #070b14;
+
+            color: white;
+
+            display: flex;
+
+            flex-direction: column;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            height: 75px;
+
+            padding: 0 8%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            border-bottom: 1px solid rgba(255,255,255,.08);
+
+            background: rgba(7,11,20,.85);
+
+            backdrop-filter: blur(15px);
+        }
+
+        .logo {
+            font-size: 25px;
+
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: #6c63ff;
+        }
+
+        .home-link {
+            color: #aeb6c7;
+
+            text-decoration: none;
+
+            transition: .3s;
+        }
+
+        .home-link:hover {
+            color: white;
+        }
+
+        /* ERROR */
+
+        .error-section {
+            flex: 1;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 60px 8%;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .error-section::before {
+            content: "";
+
+            position: absolute;
+
+            width: 450px;
+
+            height: 450px;
+
+            background: #6c63ff;
+
+            filter: blur(180px);
+
+            opacity: .15;
+        }
+
+        .error-content {
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 700px;
+        }
+
+        .error-number {
+            font-size: clamp(120px, 20vw, 230px);
+
+            line-height: .8;
+
+            font-weight: 900;
+
+            letter-spacing: -10px;
+
+            color: #6c63ff;
+
+            text-shadow:
+                0 0 80px rgba(108,99,255,.2);
+
+            margin-bottom: 35px;
+        }
+
+        .error-content h1 {
+            font-size: 35px;
+
+            margin-bottom: 15px;
+        }
+
+        .error-content p {
+            color: #929bad;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            max-width: 550px;
+
+            margin: auto;
+
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 13px 23px;
+
+            border-radius: 10px;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            transition: .3s;
+        }
+
+        .primary {
+            background: #6c63ff;
+
+            color: white;
+        }
+
+        .primary:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 15px 35px rgba(108,99,255,.35);
+        }
+
+        .secondary {
+            border: 1px solid rgba(255,255,255,.12);
+
+            color: #c1c7d4;
+
+            background: rgba(255,255,255,.035);
+        }
+
+        .secondary:hover {
+            border-color: #6c63ff;
+
+            color: white;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 25px 8%;
+
+            border-top: 1px solid rgba(255,255,255,.07);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            color: #737c90;
+
+            font-size: 14px;
+        }
+
+        @media(max-width:600px) {
+
+            .navbar {
+                padding: 0 5%;
+            }
+
+            .error-number {
+                letter-spacing: -5px;
+            }
+
+            .error-content h1 {
+                font-size: 28px;
+            }
+
+            footer {
+                flex-direction: column;
+
+                gap: 10px;
+
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Node<span>Core</span>
+        </div>
+
+        <a href="/" class="home-link">
+            ← Back to Home
+        </a>
+
+    </nav>
+
+
+    <!-- ERROR -->
+
+    <main class="error-section">
+
+        <div class="error-content">
+
+            <div class="error-number">
+                404
+            </div>
+
+            <h1>
+                Oops! Page Not Found
+            </h1>
+
+            <p>
+                The page you're looking for doesn't exist,
+                has been moved, or the URL you entered is incorrect.
+            </p>
+
+
+            <div class="buttons">
+
+                <a
+                    href="/"
+                    class="btn primary"
+                >
+                    ← Back Home
+                </a>
+
+                <a
+                    href="/contact"
+                    class="btn secondary"
+                >
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <span>
+            © 2026 NodeCore
+        </span>
+
+        <span>
+            Built with Node.js ⚡
+        </span>
+
+    </footer>
+
+</body>
+</html>
